@@ -1,0 +1,178 @@
+/* Global CSS */
+:root {
+	--color-dark: #121111;
+	--color-light: #f8f8f8;
+	--color-primary: #fdd110;
+	--color-secondary: #ea1c5c;
+	--color-secondary-shade: #da0044;
+	--color-tertiary: #55dde0;
+	--color-slate: #2e2e2e;
+}
+
+body {
+	background: var(--color-primary);
+	color: var(--color-dark);
+	font-family: "Lato", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.5;
+	font-size: 1.25rem;
+	padding: 5rem 0;
+}
+
+h1,
+h2 {
+	font-family: "Coustard", sans-serif;
+	line-height: 1.1;
+}
+
+h1 {
+	font-size: 3rem;
+	max-width: 7ch;
+}
+
+h2 {
+	font-size: 2.8rem;
+	max-width: 10ch;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+p {
+	max-width: 50ch;
+}
+
+article > * + * {
+	margin-top: 4rem;
+}
+
+@media (min-width: 48em) {
+	h1 {
+		font-size: 4.75rem;
+	}
+
+	h2 {
+		font-size: 3.8rem;
+	}
+
+	h3 {
+		font-size: 2.43rem;
+		font-style: italic;
+	}
+}
+
+/* Utilities */
+.bg-dark {
+	background: var(--color-dark);
+}
+.bg-light {
+	background: var(--color-light);
+}
+.bg-primary {
+	background: var(--color-primary);
+}
+.bg-secondary {
+	background: var(--color-secondary);
+}
+.bg-secondary-shade {
+	background: var(--color-secondary-shade);
+}
+.bg-tertiary {
+	background: var(--color-tertiary);
+}
+.bg-tertiary-shade {
+	background: var(--color-tertiary-shade);
+}
+.bg-slate {
+	background: var(--color-slate);
+}
+.color-dark {
+	color: var(--color-dark);
+}
+.color-light {
+	color: var(--color-light);
+}
+.color-primary {
+	color: var(--color-primary);
+}
+.color-secondary {
+	color: var(--color-secondary);
+}
+.color-secondary-shade {
+	color: var(--color-secondary-shade);
+}
+.color-tertiary {
+	color: var(--color-tertiary);
+}
+.color-tertiary-shade {
+	color: var(--color-tertiary-shade);
+}
+.color-slate {
+	color: var(--color-slate);
+}
+
+/* Flow utility: https://piccalil.li/quick-tip/flow-css-utility/ */
+.flow > * + * {
+	margin-top: var(--flow-space, 1em);
+}
+
+/* Wrapper / container */
+.wrapper {
+	max-width: 61.25rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.wrapper[data-type="wide"] {
+	max-width: 74rem;
+}
+
+/* Blocks */
+.tiles {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+}
+
+.tiles > * {
+	background: var(--color-dark);
+	color: var(--color-light);
+	padding: 1.25rem;
+	flex-basis: 30%;
+	min-width: 16rem;
+	flex-grow: 1;
+}
+
+.tiles h2 {
+	font-size: 2.4rem;
+	font-family: "Lato", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-style: italic;
+	max-width: 30ch;
+	color: var(--color-primary);
+}
+
+.tiles p {
+	margin-top: 1rem;
+}
+
+.tiles p {
+	font-size: 1rem;
+}
+
+.tiles > *:nth-child(even) {
+	background: var(--color-secondary);
+	color: var(--color-dark);
+}
+
+.tiles > *:nth-child(even) h2 {
+	color: var(--color-dark);
+}
+
+/* Used for the important bit section */
+.padded-box {
+	padding: 4rem 0;
+}
